@@ -1,0 +1,24 @@
+# подключение кодировки UTF-8 по умолчанию  
+AddDefaultCharset utf-8
+
+RewriteEngine on 
+RewriteBase /
+
+# перенаправление всех запросов не являющихся файлами или директориями(каталогами) на 404.php 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^(.*)$ /views/404.php
+
+# перенаправление запросов из рабочих каталогов на index.php
+RewriteCond %{REQUEST_URI} ^/catalog/$                           [OR]
+RewriteCond %{REQUEST_URI} ^/category/[0-9]+/?(page-[0-9]+)?$    [OR]
+RewriteCond %{REQUEST_URI} ^/article/[0-9]+$ 
+RewriteRule ^(.*)$ index.php 
+
+
+
+
+
+
+
+
