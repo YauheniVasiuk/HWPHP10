@@ -12,7 +12,8 @@ RewriteRule ^(.*)$ /views/404.php
 # перенаправление запросов из рабочих каталогов на index.php
 RewriteCond %{REQUEST_URI} ^/catalog/$                           [OR]
 RewriteCond %{REQUEST_URI} ^/category/[0-9]+/?(page-[0-9]+)?$    [OR]
-RewriteCond %{REQUEST_URI} ^/article/[0-9]+$ 
+RewriteCond %{REQUEST_URI} ^/article/[0-9]+$                     [OR]
+RewriteCond %{REQUEST_URI} ^/cart/([0-9]+)?$                            
 RewriteRule ^(.*)$ index.php 
 
 

@@ -50,40 +50,33 @@
             </div>
         </section>
 
-        <section class="section portfolio">
+        <section class="section portfolio" id="portfolio">
             <div class="container">
 
-                <h2>Check out our latest works</h2>
+                <h2>OUR PRODUCTS</h2>
 
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, deserunt!</p>
+                <p>CHOOSE YOUR GOODS</p>
+
+                
+                <div class="cart_items"> <button class="cart_show"><a href ="/cart/"> Корзина 
+                                            <span>(<?php echo $countItems ?>)</span></a>
+                                         </botton>
+                </div>
+                
 
                 <div class="portfolio_list">
-                    <div class="portfolio_item">
-                        <div class="thumb"><img src="images/portfolio_img1.png" alt="#"></div>
-                        <div class="title"><a href="#" alt="#">Grant motel get an identity brushup</a><span
-                                class="caption">Identity</span></div>
-                    </div>
-                    <div class="portfolio_item">
-                        <div class="thumb"><img src="images/portfolio_img2.png" alt="#"></div>
-                        <div class="title"><a href="#" alt="#">Fresh branding for a creative startup</a><span
-                                class="caption">Identity</span></div>
-                    </div>
-                </div>
 
-                <div class="portfolio_list">
+                    <?php foreach($latestProducts as $product): ?>
+
                     <div class="portfolio_item">
-                        <div class="thumb"><a><img src="images/portfolio_img3.png" alt="#"></a></div>
+                        <div class="thumb"><a><img src="<?php echo $product['image']; ?>" alt="<?php $product['title']; ?>"><a href="#"></a></a>
+                                           <h3><a href="#"><?php echo $product['title'] ?></a></h3>
+                                           <div class ="price">$ <?php echo $product['price'] ?></div>                                       
+                        </div>
+                                            <button class="cart_order"><a href="/cart/<?php echo $product['id'] ?>">В корзину</a></botton>
                     </div>
-                    <div class="portfolio_item">
-                        <div class="thumb"><a><img src="images/portfolio_img4.png" alt="#"></a></div>
-                    </div>
-                    <div class="portfolio_item">
-                        <div class="thumb"><a><img src="images/portfolio_img5.png" alt="#"></a></div>
-                    </div>
-                    <div class="portfolio_item">
-                        <div class="thumb"><a><img src="images/portfolio_img6.png" alt="#"></a></div>
-                    </div>
-                </div>
+
+                    <?php endforeach; ?>
 
             </div>
         </section>

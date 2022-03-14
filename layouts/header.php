@@ -38,6 +38,10 @@
                             <a href="#"><span class="ico ico_dr"></span></a>
                         </div>
 
+                        <div class="cart_items"> Корзина 
+                            <span>(<?php echo $countItems ?>)</span>
+                        </div>
+
                     </div>
                 </div>
             </div>

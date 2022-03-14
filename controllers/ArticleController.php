@@ -1,7 +1,7 @@
 <?php
 
-include_once ROOT.'/models/Article.php'; 
-include_once ROOT.'/models/Category.php';
+//include_once ROOT.'/models/Article.php'; 
+//include_once ROOT.'/models/Category.php';
 
     Class ArticleController {
 
